@@ -1,3 +1,3 @@
 # Employee Recognition and Feedback System
 
-![Reckon](https://github.com/xeonray-origin/reckon/intro.gif)
+![Reckon](https://9fh55kpx.media.zestyio.com/intro.gif)
