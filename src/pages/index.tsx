@@ -14,9 +14,6 @@ const Home: NextPage = () => {
         />
         <link rel="shortcut icon" href="/static/favicon.ico" />
       </Head>
-      <>
-        <LogoColored />
-      </>
     </>
   );
 };
