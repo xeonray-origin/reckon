@@ -1,6 +1,7 @@
 export const baseTheme: any = {
   typography: {
     fontSize: 14,
+    fontFamily: ['Phantom'].join(','),
     h1: {
       fontSize: '96px',
       lineHeight: '144px',

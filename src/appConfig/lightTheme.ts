@@ -8,10 +8,12 @@ export const lightTheme: Theme = createTheme({
     contrastThreshold: 3,
     primary: {
       main: '#1A0D3F',
+      light: '#483E64',
+      contrastText: '#f1f1f2',
     },
     background: {
       default: '#ebebeb',
-      paper: '#FFFFFF',
+      paper: '#FFFCFB',
     },
     error: {
       main: '#d32f2f',
