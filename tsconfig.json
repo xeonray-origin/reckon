@@ -17,6 +17,7 @@
     "baseUrl": "./src",
     "paths": {
       "@config":["config"],
+      "@appConfig":["appConfig"],
       "@components": ["components"],
       "@static/*":["static/*"],
       "@styles":["styles"]
