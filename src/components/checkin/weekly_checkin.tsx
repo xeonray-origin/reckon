@@ -39,7 +39,7 @@ const WeeklyCheckinForm: React.FC<IWeeklyCheckin> = (props) => {
   return (
     <Card sx={{ mt: 3 }}>
       <CardContent>
-        <Typography variant="h6">Questions</Typography>
+        <Typography variant="h5">Questions</Typography>
 
         <Box id="form-container">
           <FormControl sx={{ width: '100%' }}>

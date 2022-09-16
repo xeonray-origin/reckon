@@ -7,7 +7,7 @@ const HighFive: React.FC<IHighFive> = (props) => {
   return (
     <Card sx={{ mt: 3 }}>
       <CardContent>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h5" gutterBottom>
           Give a High Five
         </Typography>
 
