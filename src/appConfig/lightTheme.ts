@@ -21,4 +21,16 @@ export const lightTheme: Theme = createTheme({
       dark: '#c62828',
     },
   },
+  components: {
+    MuiCard: {
+      defaultProps: {
+        elevation: 2,
+      },
+      styleOverrides: {
+        root: {
+          borderRadius: '0.5rem',
+        },
+      },
+    },
+  },
 });
