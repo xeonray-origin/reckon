@@ -10,3 +10,4 @@ export { default as SelfReviewIcon } from './self_review';
 export { default as AppsIcon } from './apps';
 export { default as BellIcon } from './bell';
 export { default as SettingsIcon } from './settings';
+export { default as GoogleIcon } from './google';
