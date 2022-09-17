@@ -4,4 +4,6 @@ export const TopbarStyles = {
   backgroundColor: '#f12',
   height: 'auto',
   padding: '.5rem',
+  top: 0,
+  zIndex: 9,
 };
