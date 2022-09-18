@@ -1,11 +1,26 @@
-import { Box, Button, Grid, Typography } from '@mui/material';
+import {
+  Avatar,
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Grid,
+  Typography,
+  Link,
+  Divider,
+} from '@mui/material';
 import { NextPage } from 'next';
 import { useState } from 'react';
-import { ActiveTabContainerStyle, TabsContainerStyle } from '@styles';
+import {
+  ActiveTabContainerStyle,
+  AvatarStyle,
+  TabsContainerStyle,
+} from '@styles';
 import {
   CheckInRatings,
   HighFive,
   ProfileBar,
+  RecentCheckins,
   WeeklyCheckinForm,
 } from '@components';
 
@@ -15,41 +30,66 @@ const CheckIn: NextPage = (props) => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
   return (
-    <Box p={4}>
-      <Grid container maxWidth={970} margin="auto">
+    <Box p={3} maxWidth={970} margin="auto">
+      <Typography variant="h4">Check-ins</Typography>
+
+      <Box id="tabs-container" display="flex" mt={2}>
+        {tabs.map((tab: string, i: number) => (
+          <Button
+            onClick={() => {
+              setActiveTab(i);
+            }}
+            variant="text"
+            key={i}
+            sx={activeTab === i ? ActiveTabContainerStyle : TabsContainerStyle}
+          >
+            <Typography variant="body1">{tab}</Typography>
+          </Button>
+        ))}
+      </Box>
+      <Typography variant="h5" fontWeight={500} sx={{ mt: 3 }}>
+        My Check-in: Sept 10- Sept 16
+      </Typography>
+      <Grid container spacing={3}>
         <Grid item xs={12} md={8}>
-          <Typography variant="h4">Check-ins</Typography>
+          <Box id="checkin-container" mt={3}>
+            <ProfileBar />
 
-          <Box id="tabs-container" display="flex" mt={2}>
-            {tabs.map((tab: string, i: number) => (
-              <Button
-                onClick={() => {
-                  setActiveTab(i);
-                }}
-                variant="text"
-                key={i}
-                sx={
-                  activeTab === i ? ActiveTabContainerStyle : TabsContainerStyle
-                }
-              >
-                <Typography variant="body1">{tab}</Typography>
-              </Button>
-            ))}
+            <CheckInRatings />
+
+            <WeeklyCheckinForm />
+
+            <HighFive />
           </Box>
-          <Box id="checkin-body" mt={3}>
-            <Typography variant="h5" fontWeight={500}>
-              My Check-in: Sept 10- Sept 16
-            </Typography>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Box mt={3}>
+            <RecentCheckins />
+          </Box>
 
-            <Box id="checkin-container" mt={2}>
-              <ProfileBar />
+          <Box id="reviewer-tab" mt={3}>
+            <Card>
+              <CardContent sx={{ display: 'block', textAlign: 'center' }}>
+                <Avatar sx={AvatarStyle} />
+                <Typography variant="h6">Manager Name</Typography>
+                <Typography variant="body1">Reviewer</Typography>
 
-              <CheckInRatings />
+                <Button fullWidth variant="outlined" sx={{ mt: 2 }}>
+                  View 1-on-1
+                </Button>
+                <Button fullWidth variant="outlined" sx={{ mt: 2 }}>
+                  Print
+                </Button>
 
-              <WeeklyCheckinForm />
+                <Divider sx={{ margin: '14px 0' }} />
 
-              <HighFive />
-            </Box>
+                <Link>
+                  <Typography variant="body1">
+                    Who can view my Check-in?
+                  </Typography>
+                </Link>
+              </CardContent>
+            </Card>
           </Box>
         </Grid>
       </Grid>

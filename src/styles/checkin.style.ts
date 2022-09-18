@@ -33,3 +33,11 @@ export const ProfileBarActiveDueDot = {
   borderRadius: '50%',
   mr: 1,
 };
+
+export const CheckinListItem = {
+  display: 'block',
+  borderTop: '1px solid #eeeeee',
+  padding: '8px  15px 8px 24px',
+};
+
+export const AvatarStyle = { width: '48px', height: '48px', m: 'auto' };
