@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 import { Box, IconButton, Typography } from '@mui/material';
 import React from 'react';
-import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
-import CloseIcon from '@mui/icons-material/Close';
+import { LightbulbOutlined } from '@mui/icons-material';
+import { Close } from '@mui/icons-material';
 import {
   InfoMessageStyles,
   InfoPanelCloseIconStyles,
@@ -28,12 +28,12 @@ const InfoPanel = ({
       }}
     >
       <Box sx={{ mr: 2 }}>
-        <LightbulbOutlinedIcon fontSize="medium" />
+        <LightbulbOutlined fontSize="medium" />
       </Box>
       <Typography sx={InfoMessageStyles}>{message}</Typography>
 
       <IconButton disableRipple sx={InfoPanelCloseIconStyles}>
-        <CloseIcon fontSize="small" color="disabled" />
+        <Close fontSize="small" color="disabled" />
       </IconButton>
     </Box>
   );
