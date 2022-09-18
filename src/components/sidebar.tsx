@@ -10,7 +10,15 @@ import {
 import { ListItemTextStyle, SidebarStyles } from '@styles';
 import config from '@config';
 import { LogoColored } from '../static/svg';
+import { useRouter } from 'next/router';
+
 const Sidebar = () => {
+  const router = useRouter();
+
+  const redirect = (path: string) => {
+    router.replace(path);
+  };
+
   return (
     <Drawer
       PaperProps={{
@@ -30,7 +38,7 @@ const Sidebar = () => {
       <List>
         {config.sidebar.map((item, index) => {
           return (
-            <ListItemButton key={index}>
+            <ListItemButton key={index} onClick={() => redirect(item.path)}>
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText sx={ListItemTextStyle}>{item.label}</ListItemText>
             </ListItemButton>
