@@ -25,4 +25,5 @@ module.exports = {
     eqeqeq: 'warn',
     'import/no-anonymous-default-export': 'off',
   },
+  ignorePatterns: ['node_modules'],
 };
