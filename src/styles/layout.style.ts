@@ -2,7 +2,6 @@ import { Theme } from '@mui/material';
 
 export const MainContentStyles = (theme: Theme) => ({
   backgroundColor: theme.palette.background.paper,
-  // width: '100%',
   ml: '224px',
 });
 
