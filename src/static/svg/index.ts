@@ -11,3 +11,7 @@ export { default as AppsIcon } from './apps';
 export { default as BellIcon } from './bell';
 export { default as SettingsIcon } from './settings';
 export { default as GoogleIcon } from './google';
+export { default as ChatIcon } from './chat';
+export { default as CheckinPenIcon } from './checkin_pen';
+export { default as ObjectiveIcon } from './objectives_icon';
+export { default as HiFiIcon } from './hifi';
