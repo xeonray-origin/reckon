@@ -26,7 +26,15 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { CheckInTabs } from '@components';
 
-const checkins = [
+type CheckinType = {
+  id?: string;
+  frequency: string;
+  status: string;
+  action: string;
+  actionType: 'fill' | 'filled';
+};
+
+const checkins: CheckinType[] = [
   {
     id: '1',
     frequency: 'Sept 17 - Sept 23',
@@ -111,7 +119,7 @@ const Checkins: NextPage = (props) => {
                   </TableHead>
 
                   <TableBody>
-                    {checkins.map((checkin: any, i: number) => (
+                    {checkins.map((checkin: CheckinType, i: number) => (
                       <TableRow key={i}>
                         <TableCell sx={{ width: '100%' }}>
                           <Typography variant="body1">
