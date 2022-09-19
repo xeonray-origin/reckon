@@ -15,70 +15,18 @@ import {
   ObjectiveIcon,
 } from '../../static/svg';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-
-let OneOnOnePanelPaperStyles = {
-  mt: 2,
-  pb: 2,
-  boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
-};
-let OneOnOnePanelHeaderStyles = {
-  display: 'flex',
-  p: '15px',
-  justifyContent: 'space-between',
-};
-let OneOnOnePanelContentStyles = {
-  m: '10px',
-  border: '1px solid #D3D3D3',
-  borderRadius: '10px',
-  mt: 2,
-};
-
-let OneOnOnePanelBtnStyle = {
-  textTransform: 'capitalize',
-  color: '#1a0d3f',
-  width: '190px',
-};
-
-let ToDoPanelPaperStyles = {
-  mt: 2,
-  pb: 2,
-  boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
-};
-
-let ToDoPanelFilterBtnStyle = {
-  textTransform: 'capitalize',
-  color: '#1a0d3f',
-  width: '120px',
-};
-
-let ToDoPanelHeaderStyles = {
-  m: '10px',
-  border: '1px solid #D3D3D3',
-  borderRadius: '10px',
-  mt: 2,
-};
-
-let CheckinBtnStyles = {
-  color: '#DB3700',
-  fontSize: '12px',
-  lineHeight: '20px',
-  fontWeight: 700,
-};
-
-let ActiveTextStyle = {
-  color: '#6c00db',
-  fontSize: '0.9rem',
-  fontWeight: 600,
-  lineHeight: 1.5,
-};
-
-let renderObjectivesPanelStyles = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  p: 5,
-};
+import {
+  OneOnOnePanelPaperStyles,
+  OneOnOnePanelHeaderStyles,
+  OneOnOnePanelContentStyles,
+  OneOnOnePanelBtnStyle,
+  ToDoPanelPaperStyles,
+  ToDoPanelFilterBtnStyle,
+  ToDoPanelHeaderStyles,
+  CheckinBtnStyles,
+  ActiveTextStyle,
+  renderObjectivesPanelStyles,
+} from '../../styles';
 
 const renderOneOnOnePanel = () => {
   return (
