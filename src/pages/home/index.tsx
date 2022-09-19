@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import { Profile, HomepageTabs, InfoPanel } from '@components';
 import {
+  Avatar,
   Box,
   Button,
   IconButton,
@@ -13,8 +14,11 @@ import {
   CheckinPenIcon,
   HiFiIcon,
   ObjectiveIcon,
+  ReactionIcon,
 } from '../../static/svg';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ChatBubbleRoundedIcon from '@mui/icons-material/ChatBubbleRounded';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import {
   OneOnOnePanelPaperStyles,
   OneOnOnePanelHeaderStyles,
@@ -26,7 +30,17 @@ import {
   CheckinBtnStyles,
   ActiveTextStyle,
   renderObjectivesPanelStyles,
-} from '../../styles';
+  hifiRootContainerStyles,
+  hifiHideBtnStyles,
+  hifiMergeAvatorStyles,
+  hifiMergedAvatorStyles,
+  hifiTimeStyles,
+  hifiMentionStyles,
+  hifiReactionRootStyles,
+  hifiTooltipStyles,
+  hifiSubContainerStyles,
+} from '@styles';
+import { fakeHifis } from '../../misc/seeds';
 
 const renderOneOnOnePanel = () => {
   return (
@@ -228,11 +242,10 @@ const renderHiFiPanel = () => {
     <Paper
       sx={{
         ...ToDoPanelPaperStyles,
-        height: '200px',
       }}
     >
-      <Box sx={{ display: 'flex', p: '15px', justifyContent: 'space-between' }}>
-        <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+      <Box sx={hifiRootContainerStyles}>
+        <Box sx={hifiSubContainerStyles}>
           <HiFiIcon />
           <Typography
             sx={{
@@ -245,10 +258,7 @@ const renderHiFiPanel = () => {
           </Typography>
         </Box>
 
-        <Typography sx={{ fontWeight: 400, color: '#6c00db' }}>
-          {' '}
-          Hide{' '}
-        </Typography>
+        <Typography sx={hifiHideBtnStyles}> Hide </Typography>
       </Box>
 
       <Box
@@ -256,15 +266,71 @@ const renderHiFiPanel = () => {
           borderTop: '1px solid #D3D3D3',
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Typography> Development in Progress</Typography>
-        </Box>
+        {fakeHifis.map((post, index) => {
+          return (
+            <Box
+              key={index}
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
+              <Box sx={{ display: 'flex', p: 1, mt: 2 }}>
+                <Avatar sx={hifiMergeAvatorStyles}>
+                  {post.hifi_giver_initials}
+                </Avatar>
+                <Avatar sx={hifiMergedAvatorStyles}>
+                  {post.hifi_receiver_initials}
+                </Avatar>
+              </Box>
+
+              <Box sx={{ mt: 3 }}>
+                <Typography>
+                  {' '}
+                  <b style={{ fontWeight: '600 !important' }}>
+                    {post.hifi_giver_display_name}
+                  </b>{' '}
+                  to{' '}
+                  <b style={{ fontWeight: '600 !important' }}>
+                    {' '}
+                    {post.hifi_receiver_display_name}
+                  </b>
+                  <span style={hifiTimeStyles}>{post.time}</span>
+                </Typography>
+                <Typography>
+                  <span style={hifiMentionStyles}>
+                    @{post.hifi_receiver_display_name}
+                  </span>{' '}
+                  {post.hifi_message}
+                </Typography>
+                <Box sx={{ display: 'flex', mt: 1, alignItems: 'center' }}>
+                  <Box sx={hifiReactionRootStyles}>
+                    <Tooltip
+                      title="You reacted with :heart"
+                      arrow
+                      sx={hifiTooltipStyles}
+                    >
+                      <IconButton>
+                        <FavoriteIcon fontSize="small" color="error" />
+                        <Typography sx={{ fontSize: '13px', ml: '0.1rem' }}>
+                          {' '}
+                          1
+                        </Typography>
+                      </IconButton>
+                    </Tooltip>
+                  </Box>
+                  <IconButton>
+                    <ReactionIcon />
+                  </IconButton>
+                  <Typography sx={{ ml: 1, mr: 1 }}>&bull;</Typography>
+                  <IconButton>
+                    <ChatBubbleRoundedIcon fontSize="small" />
+                  </IconButton>
+                </Box>
+              </Box>
+            </Box>
+          );
+        })}
       </Box>
     </Paper>
   );
