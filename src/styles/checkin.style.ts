@@ -41,3 +41,21 @@ export const CheckinListItem = {
 };
 
 export const AvatarStyle = { width: '48px', height: '48px', m: 'auto' };
+
+export const CheckInFillButtonStyles = {
+  backgroundColor: '#db3700',
+  borderColor: '#db3700',
+  textTransform: 'capitalize',
+};
+
+export const NextPageButtonStyles = {
+  borderRadius: 0,
+  'border-top-right-radius': '0.25rem',
+  'border-bottom-right-radius': '0.25rem',
+};
+
+export const PreviousPageButtonStyles = {
+  borderRadius: 0,
+  'border-top-left-radius': '0.25rem',
+  'border-bottom-left-radius': '0.25rem',
+};
