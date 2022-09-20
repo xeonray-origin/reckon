@@ -8,7 +8,7 @@ export const SidebarStyles = (theme: Theme) => ({
   pr: '.5',
 });
 
-export const ListItemTextStyle = (theme: Theme) => ({
+export const ListItemTextStyle = () => ({
   color: '#f1f1f2',
 });
 
