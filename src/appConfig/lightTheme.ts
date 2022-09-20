@@ -32,5 +32,12 @@ export const lightTheme: Theme = createTheme({
         },
       },
     },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'capitalize',
+        },
+      },
+    },
   },
 });

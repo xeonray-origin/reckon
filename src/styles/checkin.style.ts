@@ -33,3 +33,29 @@ export const ProfileBarActiveDueDot = {
   borderRadius: '50%',
   mr: 1,
 };
+
+export const CheckinListItem = {
+  display: 'block',
+  borderTop: '1px solid #eeeeee',
+  padding: '8px  15px 8px 24px',
+};
+
+export const AvatarStyle = { width: '48px', height: '48px', m: 'auto' };
+
+export const CheckInFillButtonStyles = {
+  backgroundColor: '#db3700',
+  borderColor: '#db3700',
+  textTransform: 'capitalize',
+};
+
+export const NextPageButtonStyles = {
+  borderRadius: 0,
+  'border-top-right-radius': '0.25rem',
+  'border-bottom-right-radius': '0.25rem',
+};
+
+export const PreviousPageButtonStyles = {
+  borderRadius: 0,
+  'border-top-left-radius': '0.25rem',
+  'border-bottom-left-radius': '0.25rem',
+};

@@ -13,7 +13,7 @@ interface IProfileBar {}
 
 const ProfileBar: React.FC<IProfileBar> = (props) => {
   return (
-    <Card sx={{ mt: 3 }}>
+    <Card>
       <CardContent sx={{ display: 'flex', alignItems: 'center' }}>
         <Avatar sx={{ width: '48px', height: '48px' }} />
 
