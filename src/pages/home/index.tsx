@@ -4,6 +4,7 @@ import {
   Avatar,
   Box,
   Button,
+  Grid,
   IconButton,
   Paper,
   Tooltip,
@@ -338,52 +339,8 @@ const renderHiFiPanel = () => {
 
 const Home = () => {
   return (
-    <Box
-      sx={{
-        maxWidth: '1200px',
-        margin: 'auto',
-        display: 'flex',
-        justifyContent: 'center',
-        mt: 17,
-      }}
-    >
-      <Box sx={{ width: '900px' }}>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'end',
-            mb: 3,
-          }}
-        >
-          <Typography
-            color="primary"
-            variant="h1"
-            sx={{
-              fontSize: '35px',
-              lineHeight: '36px',
-              color: '#1a0d3f',
-              fontWeight: 600,
-            }}
-          >
-            {' '}
-            Home{' '}
-          </Typography>
-
-          <Typography
-            color="primary"
-            sx={{
-              fontSize: '1rem',
-              lineHeight: 1.5,
-              color: '#6c00db',
-              textDecoration: 'none',
-            }}
-          >
-            {' '}
-            Company Directory{' '}
-          </Typography>
-        </Box>
-
+    <Grid container>
+      <Box sx={{ width: '100%' }}>
         <Profile />
         <HomepageTabs />
         <InfoPanel
@@ -401,7 +358,7 @@ const Home = () => {
         {renderObjectivesPanel()}
         {renderHiFiPanel()}
       </Box>
-    </Box>
+    </Grid>
   );
 };
 
