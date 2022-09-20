@@ -15,3 +15,4 @@ export { default as ChatIcon } from './chat';
 export { default as CheckinPenIcon } from './checkin_pen';
 export { default as ObjectiveIcon } from './objectives_icon';
 export { default as HiFiIcon } from './hifi';
+export { default as ReactionIcon } from './reaction';

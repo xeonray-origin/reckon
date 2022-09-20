@@ -61,3 +61,65 @@ export const renderObjectivesPanelStyles = {
   flexDirection: 'column',
   p: 5,
 };
+
+export const hifiRootContainerStyles = {
+  display: 'flex',
+  p: '15px',
+  justifyContent: 'space-between',
+};
+export const hifiSubContainerStyles = {
+  display: 'flex',
+  gap: 1,
+  alignItems: 'center',
+};
+export const hifiHideBtnStyles = { fontWeight: 400, color: '#6c00db' };
+export const hifiMergeAvatorStyles = {
+  width: 40,
+  height: 40,
+  backgroundColor: '#FFD2C4',
+  color: 'primary.main',
+  fontSize: '16px',
+  fontWeight: 550,
+  boxSizing: 'content-box',
+  border: '2px solid white',
+};
+export const hifiMergedAvatorStyles = {
+  position: 'relative',
+  right: '10px',
+  width: 40,
+  height: 40,
+  backgroundColor: '#F0E9FB',
+  color: 'primary.main',
+  fontSize: '16px',
+  fontWeight: 550,
+  boxSizing: 'content-box',
+  border: '2px solid white',
+};
+
+export const hifiTimeStyles = {
+  color: '#5e5777 !important',
+  fontSize: '12px',
+  lineHeight: '20px',
+  marginLeft: '2px',
+};
+
+export const hifiMentionStyles = {
+  fontSize: '1rem',
+  lineHeight: 1.5,
+  color: '#6c00db',
+  textDecoration: 'none',
+  fontWeight: 600,
+};
+
+export const hifiReactionRootStyles = {
+  border: '1px solid #1A0D3F',
+  backgroundColor: '#F0E9FB',
+  width: '39px',
+  textAlign: 'center',
+  p: 0,
+  m: 0,
+  height: '23px',
+  borderRadius: '8px ',
+};
+
+export const hifiTooltipStyles = { mt: '-8px' };
