@@ -1,13 +1,16 @@
 import { Theme } from '@mui/material';
 
 export const MainContentStyles = (theme: Theme) => ({
+  display: 'flex',
   backgroundColor: theme.palette.background.paper,
   ml: '224px',
 });
 
 export const MainContentContainerStyles = {
-  marginTop: '55px',
-  backgroundColor: '#fff',
-  width: '100%',
+  width: '60%',
+  display: 'block',
+  marginLeft: 'auto',
+  marginRight: 'auto',
   height: '100vh',
+  marginTop: '64px',
 };

@@ -82,10 +82,6 @@ const checkins: CheckinType[] = [
 const Checkins: NextPage = (props) => {
   return (
     <Box sx={BoxContainerStyles}>
-      <Typography variant="h4" fontWeight={'bold'}>
-        Check-ins
-      </Typography>
-
       <CheckInTabs />
 
       <Typography variant="h5" fontWeight={500} sx={{ mt: 3 }}>

@@ -6,4 +6,6 @@ export { default as LoginCard } from './login';
 export { default as ProfileBar } from './profilebar_card';
 export { default as HomepageTabs } from './homepage_tabs';
 export { default as InfoPanel } from './info_panel';
+export { default as HighFiveFilterCard } from './high_five_filter_card';
+export { default as PageHeader } from './page_header';
 export * from './checkin';
